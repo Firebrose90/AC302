@@ -28,7 +28,7 @@ function create(){
   ledge = platforms.create(-100,250, 'ground');
   ledge.body.immovable = true;
   
-  var style = {font: "bold 32px Helvetica" fill: "Firebrick"};
+  var style = {font: "bold 32px Helvetica" fill: "Green"};
   var style2 = {font: "bold 32px Helvetica" fill: "Yellow"}; 
 
   scorelabel = game.add.text(300, 560, "Score: ", style);
