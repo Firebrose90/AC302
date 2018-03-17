@@ -71,7 +71,7 @@ function create(){
   firstaids = game.add.physicsGroup();
   firstaids.enableBody = true;
   for(var i = 0; i < 2; i++){
-    var firstaid = firstaidss.create(i*70, 0, 'fistaid');
+    var firstaid = firstaids.create(i*70, 0, 'fistaid');
     firstaid.body.bounce.y = 0.7 + Math.random()*0.2;
   }
 
@@ -84,7 +84,7 @@ function update(){
   game.physics.arcade.collide(player, platforms);
   game.physics.arcade.collide(enemy1, platforms);
   game.physics.arcade.collide(stars, platforms);
-  game.physics.arcade.collide(firstaid, platforms);
+  game.physics.arcade.collide(firstaids, platforms);
 
   player.body.velocity.x = 0;
 
