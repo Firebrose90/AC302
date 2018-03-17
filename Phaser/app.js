@@ -103,7 +103,7 @@ function update(){
 
   game.physics.arcade.overlap(player, stars, collectStar);
   game.physics.arcade.overlap(player, enemy1, loselife);
-  game.physics.arcade.overlap(player, firstaid, gainlife);
+  game.physics.arcade.overlap(player, firstaids, gainlife);
 
   moveEnemy();
 
