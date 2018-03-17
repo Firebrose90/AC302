@@ -72,6 +72,7 @@ function create(){
   firstaids.enableBody = true;
   for(var i = 0; i < 2; i++){
     var firstaid = firstaids.create(i*70, 0, 'fistaid');
+    firstaid.body.gravity.y = 200;
     firstaid.body.bounce.y = 0.7 + Math.random()*0.2;
   }
 
