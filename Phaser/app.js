@@ -71,7 +71,7 @@ function create(){
   firstaids = game.add.physicsGroup();
   firstaids.enableBody = true;
   for(var i = 0; i < 2; i++){
-    var firstaid = firstaids.create(i*70, 0, 'fistaid');
+    var firstaid = firstaids.create(i*70, 0, 'firstaid');
     firstaid.body.gravity.y = 200;
     firstaid.body.bounce.y = 0.7 + Math.random()*0.2;
   }
