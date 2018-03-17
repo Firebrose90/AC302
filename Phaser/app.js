@@ -7,8 +7,8 @@ function preload(){
   game.load.image('sky', 'assets/sky.png');
   game.load.image('ground', 'assets/platform.png');
   game.load.image('star', 'assets/star.png');
-  game.load.spritesheet('dude', 'assets/dude/png', 32, 48);
-  game.load.spritesheet('baddie', 'assets/baddie/png', 32, 32);
+  game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
+  game.load.spritesheet('baddie', 'assets/baddie.png', 32, 32);
 }
 
 function create(){
@@ -28,8 +28,8 @@ function create(){
   ledge = platforms.create(-100,250, 'ground');
   ledge.body.immovable = true;
   
-  var style = {font: "bold 32px Helvetica" fill: "Green"};
-  var style2 = {font: "bold 32px Helvetica" fill: "Yellow"}; 
+  var style = {font: "bold 32px Helvetica" , fill: "Green"};
+  var style2 = {font: "bold 32px Helvetica",  fill: "Yellow"}; 
 
   scorelabel = game.add.text(300, 560, "Score: ", style);
   scorenumber = game.add.text(420, 560, score, style2);
@@ -92,12 +92,12 @@ function update(){
   	player.body.velocity.y = -300;
   }
 
-  game.physics,arcade.overlap(player, stars, collectStar);
-  game.physics,arcade.overlap(player, enemys1, loselife);
+  game.physics.arcade.overlap(player, stars, collectStar);
+  game.physics.arcade.overlap(player, enemy1, loselife);
 
   moveEnemy();
 
-  if(life =< 0){
+  if(life <= 0){
       endGame();
   }
 }
@@ -125,7 +125,7 @@ function loselife(player, enemy){
 }
 
 function moveEnemy(){
-  if(enemy1.x > 760){
+  if(enemy1.x > 759){
      enemy1.animations.play('left');
      enemy1.body.velocity.x = -120;
   }
