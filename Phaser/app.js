@@ -75,8 +75,6 @@ function create(){
     firstaid.body.bounce.y = 0.7 + Math.random()*0.2;
   }
 
-  var firstaid = q
-
   cursors = game.input.keyboard.createCursorKeys();
 }
 
