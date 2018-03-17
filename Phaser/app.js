@@ -149,4 +149,6 @@ function moveEnemy(){
 function gainlife(player, firstaid){
   life += 1;
   lifenumber.setText(life);
+  firstaid.kill();
+  firstaid.reset(Math.random()*750, 0);
 }
